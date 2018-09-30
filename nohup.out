@@ -1,0 +1,17 @@
+[martini] listening on :3000 (development)
+[martini] Started GET / for 101.71.41.229:21626
+[martini] Completed 200 OK in 156.493µs
+[martini] Started GET /favicon.ico for 101.71.41.229:21626
+[martini] Completed 404 Not Found in 188.912µs
+[martini] Started GET / for 101.71.41.229:39389
+[martini] Completed 200 OK in 115.16µs
+[martini] Started GET / for 101.71.41.229:39389
+[martini] Completed 200 OK in 97.611µs
+[martini] Started GET / for 101.71.41.229:39389
+[martini] Completed 200 OK in 72.498µs
+[martini] Started GET / for 101.71.41.229:39389
+[martini] Completed 200 OK in 86.212µs
+[martini] Started GET / for 101.71.41.229:39389
+[martini] Completed 200 OK in 68.105µs
+[martini] Started GET / for 101.71.41.229:39389
+[martini] Completed 200 OK in 68.084µs
