@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/go-martini/martini"
-	"github.com/martini-contrib/render"
 	"path/filepath"
 
+	"github.com/go-martini/martini"
+	"github.com/martini-contrib/render"
+	//"github.com/mloves0824/antalk_web/pkg/test"
 	//	"github.com/docopt/docopt-go"
 )
 
@@ -30,7 +31,7 @@ func main() {
 	//		return "Hello world!"
 	//	})
 	//	m.Run()
-	
+
 	var assets string
 	abspath, err := filepath.Abs("/home/messi/dev/go/src/github.com/mloves0824/antalk_web/cmd/fe/assets")
 	if err != nil {
@@ -39,18 +40,18 @@ func main() {
 	}
 	assets = abspath
 
-	api := &ApiServer{}
+	//api := &test.ApiServer{}
 
 	m := martini.New()
 	m.Use(martini.Recovery())
 	m.Use(render.Renderer())
 	m.Use(martini.Static(assets, martini.StaticOptions{SkipLogging: true}))
-	r := martini.NewRouter()
-	r.Group("/test", func(r martini.Router) {
-		r.Group("/pegasus", func(r martini.Router) {
-			r.Get("/set/:key/:value", api.XPing)
-		})
-	}	
-	
+	//	r := martini.NewRouter()
+	//	r.Group("/test", func(r martini.Router) {
+	//		r.Group("/pegasus", func(r martini.Router) {
+	//			r.Get("/set/:key/:value", api.Set)
+	//		})
+	//	})
+
 	m.Run()
 }
