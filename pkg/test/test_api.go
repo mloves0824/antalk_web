@@ -22,3 +22,8 @@ func (s *ApiServer) Set(params martini.Params) (int, string) {
 	//	return rpc.ApiResponseJson("OK")
 	return 200, string("OK")
 }
+
+
+func (s *ApiServer) List(params martini.Params) (int, string) {
+	return 200, string("OK")
+}
