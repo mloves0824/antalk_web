@@ -10,6 +10,7 @@ import (
 	//	"github.com/martini-contrib/render"
 	//	"github.com/mloves0824/antalk_web/pkg/test"
 	//	"github.com/docopt/docopt-go"
+	"github.com/docopt/docopt-go"
 	pb "github.com/mloves0824/antalk_web/pkg/proto"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
@@ -23,6 +24,16 @@ const (
 )
 
 func main() {
+	const usage = `
+Usage:
+	antalk-web-fe  [--assets-dir=PATH] 
+`
+	_, err := docopt.Parse(usage, nil, true, "", false)
+	if err != nil {
+		//log.PanicError(err, "parse arguments failed")
+
+	}
+
 	router := gin.Default()
 	router.LoadHTMLGlob("/home/chenb/workspace/github/mnt/gopath/src/github.com/mloves0824/antalk_web/cmd/fe/templates/*")
 	//router.LoadHTMLFiles("templates/template1.html", "templates/template2.html")
