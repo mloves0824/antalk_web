@@ -12,3 +12,6 @@ test:
 
 clean: 
 	@rm -rf bin
+
+docker:
+	docker build --force-rm -t antalk-web-image .
