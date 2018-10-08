@@ -1,9 +1,8 @@
 package main
 
 import (
-	"context"
 	"encoding/json"
-	"fmt"
+	//"fmt"
 	"io/ioutil"
 	"log"
 	"net"
@@ -12,13 +11,13 @@ import (
 
 	"github.com/XiaoMi/pegasus-go-client/pegasus"
 	pb "github.com/mloves0824/antalk_web/pkg/proto"
-	"golang.org/x/net/context"
+	context "golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )
 
 const (
-	port = ":50051"
+	port = ":60000"
 )
 
 type server struct{}
@@ -28,7 +27,6 @@ func (s *server) TestSet(ctx context.Context, in *pb.SetReq) (*pb.SetReply, erro
 	cfgPath, _ := filepath.Abs("./config/pegasus-client-config.json")
 	rawCfg, err := ioutil.ReadFile(cfgPath)
 	if err != nil {
-		//fmt.Println(err)
 		return &pb.SetReply{Status: -1}, nil
 	}
 

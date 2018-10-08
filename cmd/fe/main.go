@@ -18,7 +18,7 @@ import "net/http"
 import "github.com/gin-gonic/gin"
 
 const (
-	address     = "localhost:50051"
+	address     = "localhost:60000"
 	defaultName = "world"
 )
 
